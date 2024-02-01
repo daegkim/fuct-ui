@@ -12,5 +12,16 @@ export default defineConfig({
       name: 'fuct-ui',
       fileName: 'index',
     },
+    rollupOptions: {
+      // 번들에서 제외
+      external: ['react', 'react-dom'],
+      output: {
+        // 빌드 결과물에서 아래 글로벌 변수를 사용
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
+    },
   },
 });
