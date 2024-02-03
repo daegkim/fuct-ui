@@ -14,12 +14,13 @@ export default defineConfig({
     },
     rollupOptions: {
       // 번들에서 제외
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', 'styled-components'],
       output: {
         // 빌드 결과물에서 아래 글로벌 변수를 사용
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'styled-components': 'styled',
         },
       },
     },
