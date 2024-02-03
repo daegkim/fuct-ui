@@ -49,7 +49,7 @@ function App() {
 }
 ```
 
-물론 Toast 컴포넌트를 만들기 귀찮을 수 있습니다. 그래서 `<FuctToast />`라는 컴포넌트도 제공합니다. 이 컴포넌트는 `useFuctToast`라는 hook의 `showToast`를 사용하세요.
+물론 Toast 컴포넌트를 만들기 귀찮을 수 있습니다. 그래서 `<FuctToast />`라는 컴포넌트도 제공합니다. 이 Toast를 띄우기 위해서는 `useFuctToast`라는 hook의 `showToast`를 사용하세요.
 
 ## Modal
 
