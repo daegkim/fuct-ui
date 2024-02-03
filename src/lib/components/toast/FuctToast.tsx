@@ -4,7 +4,8 @@ import { useToast, useToastComponent } from '.';
 import type { FuctToastOption } from './types';
 
 export const useFuctToast = () => {
-  return useToast<FuctToastOption>();
+  const { showToast } = useToast();
+  return { showToast: showToast<FuctToastOption> };
 };
 
 const FuctToast = () => {

@@ -30,11 +30,11 @@ export const ToastProvider = ({ children }: PropsWithChildren) => {
   );
 };
 
-export const useToast = <T extends { duration?: number } = any>() => {
+export const useToast = () => {
   const { setIsOpen, setMessage, setOptions, prevTimer } = useContext(ToastHookContext);
 
   const showToast = useCallback(
-    (message: string, options?: T) => {
+    <T extends { duration?: number } = any>(message: string, options?: T) => {
       const duration = options?.duration ?? 2000;
 
       if (prevTimer.current >= 0) {
