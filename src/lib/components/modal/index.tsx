@@ -47,8 +47,8 @@ export const ModalProvider = ({ children }: PropsWithChildren) => {
       <ModalHookContext.Provider value={hookValue}>
         <>{children}</>
         <div id="fuct-modal-area">
-          {modals.map((modal) => (
-            <div key={modal.uuid}>{cloneElement(modal.component, { key: modal.uuid, uuid: modal.uuid })}</div>
+          {modals.map((modal, index) => (
+            <div key={modal.uuid}>{cloneElement(modal.component, { key: modal.uuid, uuid: modal.uuid, index })}</div>
           ))}
         </div>
       </ModalHookContext.Provider>

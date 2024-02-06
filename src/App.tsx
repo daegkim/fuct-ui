@@ -1,5 +1,5 @@
-import ModalLayout from './ModalLayout';
 import { useModal } from './lib/components/modal';
+import FuctConfirm from './lib/components/modal/FuctConfirm';
 import Toast, { useFuctToast } from './lib/components/toast/FuctToast';
 
 function App() {
@@ -10,13 +10,17 @@ function App() {
     <div>
       <button
         onClick={async () => {
-          showToast('저장에 성공하였습니다.', { duration: 2000, color: 'red', position: 'top' });
-          const result = await openModal<{ name: string }>(
-            <ModalLayout>
-              <div>hello world</div>
-            </ModalLayout>
+          const result = await openModal<boolean>(
+            <FuctConfirm>
+              <div style={{ width: '200px' }}>저장하시겠습니까?</div>
+            </FuctConfirm>
           );
-          console.log(result);
+
+          if (result) {
+            showToast('저장에 성공하였습니다.', { duration: 2000, color: 'red', position: 'top' });
+          } else {
+            showToast('취소하였습니다.', { duration: 2000, color: 'red', position: 'top' });
+          }
         }}
       >
         click

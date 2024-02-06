@@ -5,7 +5,7 @@ export interface Modal {
 }
 
 export interface ModalHookContextProps {
-  openModal: <T>(component: JSX.Element) => Promise<T>;
+  openModal: <T = any>(component: JSX.Element) => Promise<T>;
 }
 
 export interface ModalContextProps<T = any> {
@@ -14,4 +14,5 @@ export interface ModalContextProps<T = any> {
 
 export interface DefaultModalComponentProps {
   uuid?: string;
+  index?: number;
 }
