@@ -25,11 +25,10 @@
     "vite-plugin-dts": "^3.7.2"
   },
   "author": "daegeunkim",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "dist/index.js",
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "license": "MIT",
   "repository": {
